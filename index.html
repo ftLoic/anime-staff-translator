@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Staff Translator (with AniList)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="content">
+        <h1>Anime Staff Translator</h1>
+
+        <p>The Anime Staff Translator works with AniList's API and allows you get the romaji transliteration/AniList link for someone in the Japanese anime industry. The tool isn't affiliated with AniList. Please note that this doesn't work with duplicate names at the moment.</p>
+
+        <h2>Translation</h2>
+
+        <p>Names must be separated with tabs or line breaks.</p>
+
+        <div id="main">
+            <div class="main-child">
+                <textarea id="input" placeholder="中村豊
+吉原達矢
+椅子汰
+Nasryyy"></textarea>
+                <button id="translate">Translate</button>
+            </div>
+            <div class="main-child">
+                <div id="list"></div>
+                <button id="copy">Copy</button>
+            </div>
+        </div>
+        
+        <h2>Settings</h2>
+
+        <input type="checkbox" id="check-anilist"> Add AniList links
+        <input type="checkbox" id="check-cell"> 1 cell
+        <input type="checkbox" id="check-cooldown"> No cooldown (risk of IP blocking!)
+
+        <h2>Custom rules (saved in local storage)</h2>
+        
+        <p>Please enter one person per line. The Japanese name and the English name must be separated by a tab.</p>
+
+        <textarea id="rules" placeholder="中村豊	Yutaka Nakamura
+吉原達矢	Tatsuya Yoshihara
+椅子汰	Isuta"></textarea>
+    </div>
+
+    <footer>
+        Made with ❤ by <a href="https://twitter.com/ftLoic" target="_blank">@ftLoic</a>
+    </footer>
+</body>
+</html>
+<script src="anilist.js"></script>
